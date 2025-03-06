@@ -1,0 +1,128 @@
+[
+  {
+    "id": 1,
+    "from": "Mumbai",
+    "to": "Delhi",
+    "departure": "21:00",
+    "price": 1500,
+    "seats": 40,
+    "operator": "IndiGo Bus Services",
+    "busType": "Sleeper AC",
+    "availableDates": [
+      "2025-03-15",
+      "2025-03-16",
+      "2025-03-17",
+      "2025-03-18",
+      "2025-03-19"
+    ]
+  },
+  {
+    "id": 2,
+    "from": "Bangalore",
+    "to": "Chennai",
+    "departure": "20:30",
+    "price": 800,
+    "seats": 38,
+    "operator": "SRS Travels",
+    "busType": "Semi-Sleeper AC",
+    "availableDates": [
+      "2025-03-15",
+      "2025-03-16",
+      "2025-03-17",
+      "2025-03-18"
+    ]
+  },
+  {
+    "id": 3,
+    "from": "Delhi",
+    "to": "Jaipur",
+    "departure": "19:00",
+    "price": 600,
+    "seats": 40,
+    "operator": "Rajasthan Travels",
+    "busType": "AC Seater",
+    "availableDates": [
+      "2025-03-15",
+      "2025-03-16",
+      "2025-03-17"
+    ]
+  },
+  {
+    "id": 4,
+    "from": "Hyderabad",
+    "to": "Bangalore",
+    "departure": "22:00",
+    "price": 1200,
+    "seats": 35,
+    "operator": "Orange Travels",
+    "busType": "Volvo AC Sleeper",
+    "availableDates": [
+      "2025-03-15",
+      "2025-03-16",
+      "2025-03-17",
+      "2025-03-18"
+    ]
+  },
+  {
+    "id": 5,
+    "from": "Kolkata",
+    "to": "Varanasi",
+    "departure": "20:00",
+    "price": 1100,
+    "seats": 42,
+    "operator": "Bengal Express",
+    "busType": "AC Sleeper",
+    "availableDates": [
+      "2025-03-15",
+      "2025-03-16",
+      "2025-03-17"
+    ]
+  },
+  {
+    "id": 6,
+    "from": "Chennai",
+    "to": "Coimbatore",
+    "departure": "21:30",
+    "price": 750,
+    "seats": 36,
+    "operator": "KPN Travels",
+    "busType": "AC Semi-Sleeper",
+    "availableDates": [
+      "2025-03-15",
+      "2025-03-16",
+      "2025-03-17",
+      "2025-03-18"
+    ]
+  },
+  {
+    "id": 7,
+    "from": "Pune",
+    "to": "Mumbai",
+    "departure": "18:00",
+    "price": 400,
+    "seats": 45,
+    "operator": "Purple Travels",
+    "busType": "AC Seater",
+    "availableDates": [
+      "2025-03-15",
+      "2025-03-16",
+      "2025-03-17"
+    ]
+  },
+  {
+    "id": 8,
+    "from": "Ahmedabad",
+    "to": "Mumbai",
+    "departure": "20:00",
+    "price": 1000,
+    "seats": 40,
+    "operator": "Gujarat Travels",
+    "busType": "Volvo AC Sleeper",
+    "availableDates": [
+      "2025-03-15",
+      "2025-03-16",
+      "2025-03-17",
+      "2025-03-18"
+    ]
+  }
+]

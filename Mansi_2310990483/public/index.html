@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian Bus Booking System</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-brand">
+                <i class="fas fa-bus"></i>
+                <span>BusBooking</span>
+            </div>
+            <div class="nav-links">
+                <a href="#" onclick="backToSearch()" class="nav-link">
+                    <i class="fas fa-search"></i> Search Buses
+                </a>
+                <a href="#" onclick="showMyBookings()" class="nav-link">
+                    <i class="fas fa-ticket-alt"></i> My Bookings
+                </a>
+                <a href="#" class="nav-link">
+                    <i class="fas fa-info-circle"></i> About
+                </a>
+                <a href="#" class="nav-link">
+                    <i class="fas fa-phone"></i> Contact
+                </a>
+            </div>
+            <div class="nav-user">
+                <a href="#" class="nav-link">
+                    <i class="fas fa-user"></i> Login
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1>Travel India by Bus</h1>
+            <p>Book your bus tickets for a comfortable and safe journey across India. Explore the best routes, premium services, and amazing deals for your next adventure.</p>
+            <div class="hero-buttons">
+                <button class="hero-btn primary" onclick="document.querySelector('#search-section').scrollIntoView({behavior: 'smooth'})">
+                    <i class="fas fa-search"></i> Search Buses
+                </button>
+                <button class="hero-btn secondary" onclick="document.querySelector('#featured-routes').scrollIntoView({behavior: 'smooth'})">
+                    <i class="fas fa-star"></i> Featured Routes
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <main>
+        <section id="search-section">
+            <h2><i class="fas fa-search"></i> Search Buses</h2>
+            <form id="search-form" class="search-form">
+                <div class="form-group">
+                    <label for="from"><i class="fas fa-map-marker-alt"></i> From:</label>
+                    <input type="text" id="from" placeholder="Enter departure city" list="cities">
+                    <datalist id="cities">
+                        <option value="Mumbai">
+                        <option value="Delhi">
+                        <option value="Bangalore">
+                        <option value="Chennai">
+                        <option value="Kolkata">
+                        <option value="Hyderabad">
+                        <option value="Jaipur">
+                        <option value="Varanasi">
+                    </datalist>
+                </div>
+                <div class="form-group">
+                    <label for="to"><i class="fas fa-map-marker"></i> To:</label>
+                    <input type="text" id="to" placeholder="Enter destination city" list="cities">
+                </div>
+                <div class="form-group">
+                    <label for="date"><i class="fas fa-calendar"></i> Date:</label>
+                    <input type="date" id="date">
+                </div>
+                <button type="submit" class="btn-primary" onclick="searchBuses(); return false;">
+                    <i class="fas fa-search"></i> Search Buses
+                </button>
+            </form>
+            <div id="buses-list" class="buses-list"></div>
+        </section>
+
+        <section id="booking-section" class="hidden">
+            <h2><i class="fas fa-ticket-alt"></i> Book Your Seat</h2>
+            <form id="booking-form" class="booking-form">
+                <div class="form-group">
+                    <label for="bus-id">Bus ID:</label>
+                    <input type="number" id="bus-id" required readonly>
+                </div>
+                <div class="form-group">
+                    <label for="name"><i class="fas fa-user"></i> Full Name:</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email"><i class="fas fa-envelope"></i> Email:</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone"><i class="fas fa-phone"></i> Phone:</label>
+                    <input type="tel" id="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="seats"><i class="fas fa-chair"></i> Number of Seats:</label>
+                    <input type="number" id="seats" min="1" max="4" value="1" required>
+                </div>
+                <div class="form-group">
+                    <label for="selected-date"><i class="fas fa-calendar-check"></i> Selected Date:</label>
+                    <select id="selected-date" required>
+                        <option value="">Select a date</option>
+                    </select>
+                </div>
+                <div class="button-group">
+                    <button type="submit" class="btn-primary"><i class="fas fa-check"></i> Confirm Booking</button>
+                    <button type="button" onclick="cancelBooking()" class="btn-secondary"><i class="fas fa-times"></i> Cancel</button>
+                </div>
+            </form>
+        </section>
+
+        <section id="my-bookings-section" class="hidden">
+            <h2><i class="fas fa-history"></i> My Bookings</h2>
+            <div id="my-bookings-list" class="bookings-list"></div>
+            <button onclick="backToSearch()" class="btn-primary"><i class="fas fa-arrow-left"></i> Back to Search</button>
+        </section>
+    </main>
+
+    <!-- Bus Details Modal -->
+    <div id="bus-details-modal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2><i class="fas fa-bus"></i> Bus Details</h2>
+                <button class="close-modal" onclick="closeModal()"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="modal-body">
+                <div id="bus-details-content"></div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-primary" onclick="bookSelectedBus()"><i class="fas fa-ticket-alt"></i> Book Now</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Indian Bus Booking System. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 

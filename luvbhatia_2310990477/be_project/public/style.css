@@ -1,0 +1,196 @@
+/* Keyframes for image slider */
+@keyframes change{
+    0%{
+        background-image: url(image/img1.jpg);
+    }
+    20%{
+        background-image: url(image/img2.jpg);
+    }
+    40%{
+        background-image: url(image/img3.jpg);
+    }
+    60%{
+        background-image: url(image/img4.jpg);
+    }
+    80%{
+        background-image: url(image/img5.jpg);
+    }
+    100%{
+        background-image: url(image/img6.jpg);
+    }
+    
+}
+/* Image slider keyframe ends */
+/* Keyframe for loader */
+@keyframes slidein {
+    0%{
+        transform: translateX(-220%);
+        /* transform: scale(0); */
+    }
+    
+    100%{
+        transform: translateX(0%);
+    }
+}
+
+/* Keyframe for loader ends */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5dc; /* Cream color theme */
+    overflow: hidden;
+    position: relative;
+}
+
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('image/img1.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    animation:change 30s infinite ease-in-out ;
+
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    background-color: rgba(0, 0, 0, 0.5); /* Transparent background */
+    position: absolute;
+    width: 100%;
+    top: 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    color: white;
+    
+    
+}
+
+.logo img {
+    width: 150px;
+    margin-right: 10px;
+    
+    
+    
+    
+}
+
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    /* margin-right: 20px; */
+    margin: 14px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+nav ul li a:hover{
+    text-decoration: underline;
+}
+.login {
+    margin-right: 50px; 
+}
+
+.login a {
+    text-decoration: none;
+    color: white;
+    /* border: 1px solid white; */
+    padding: 5px 5px;
+    border-radius: 5px;
+    
+}
+.login a:hover{
+    text-decoration: underline;
+}
+
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: CENTER;
+    align-items: FLEX-START;
+    color: rgb(198, 197, 204);
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 5rem;
+    margin: 2VW;
+    animation: slidein 1s 1 ease-out;
+    opacity: 100%;
+}
+
+/* .contact-info {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.contact-info p {
+    margin: 0.5rem 0;
+} */
+ .text_intro{
+    animation: 0.4 ease-out 0s 1 slidein;
+} 
+#B{
+    color: #08b483;
+    font-size: 100px;
+    /* opacity: 100%; */
+ }
+ #K{
+    color: #fdab01;
+ font-size: 100px;
+ /* opacity: 100%; */
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    /* background-color: rgba(255, 255, 255, 0.9); Semi-transparent background */
+    background-color: rgba(0, 0, 0, 0.5);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 4px;
+    
+}
+
+.dropdown-content a {
+    color:white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent hover effect */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+nav ul li .dropdown-content a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+}
