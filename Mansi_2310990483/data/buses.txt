@@ -22,7 +22,7 @@
     "to": "Chennai",
     "departure": "20:30",
     "price": 800,
-    "seats": 38,
+    "seats": 35,
     "operator": "SRS Travels",
     "busType": "Semi-Sleeper AC",
     "availableDates": [
