@@ -1,0 +1,26 @@
+[
+    {
+        "service": "City Bus",
+        "route": "Route 5",
+        "rating": 8,
+        "comments": "The bus was on time and clean."
+    },
+    {
+        "service": "Metro Bus",
+        "route": "Route 10",
+        "rating": 9,
+        "comments": "Very comfortable and spacious."
+    },
+    {
+        "service": "Express Bus",
+        "route": "Route 15",
+        "rating": 7,
+        "comments": "Good service, but the bus was a bit late."
+    },
+    {
+        "service": "Haryana Roadways",
+        "route":"Route15",
+        "rating":8,
+        "comments":"Good"
+    }
+]
