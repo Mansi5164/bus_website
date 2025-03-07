@@ -1,0 +1,23 @@
+[
+  {
+    "id": "2230cc3c-63d7-410a-a717-2141cc1bc703",
+    "productId": "1234-uuid",
+    "timestamp": "2025-03-06T09:23:56.798Z",
+    "rating": 5,
+    "message": "Great product!"
+  },
+  {
+    "id": "251f1177-7788-42d1-8f08-b7819b8f1fae",
+    "productId": "1",
+    "timestamp": "2025-03-06T09:24:21.921Z",
+    "rating": 5,
+    "message": "Great product!"
+  },
+  {
+    "id": "a5851128-764d-421b-9abd-de49ef279584",
+    "productId": "3",
+    "timestamp": "2025-03-06T09:24:26.123Z",
+    "rating": 5,
+    "message": "Great product!"
+  }
+]

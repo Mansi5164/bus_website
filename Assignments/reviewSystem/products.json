@@ -1,0 +1,26 @@
+[
+  {
+    "id": "1",
+    "name": "Laptop",
+    "description": "Gaming Laptop",
+    "averageRating": 5
+  },
+  {
+    "id": "2",
+    "name": "Laptop",
+    "description": "Gaming Laptop",
+    "averageRating": 0
+  },
+  {
+    "id": "3",
+    "name": "Computer",
+    "description": "software",
+    "averageRating": 5
+  },
+  {
+    "id": "4",
+    "name": "phone",
+    "description": "useful device",
+    "averageRating": 0
+  }
+]

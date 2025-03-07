@@ -5,7 +5,7 @@
     "to": "Delhi",
     "departure": "21:00",
     "price": 1500,
-    "seats": 40,
+    "seats": 44,
     "operator": "IndiGo Bus Services",
     "busType": "Sleeper AC",
     "availableDates": [
@@ -38,7 +38,7 @@
     "to": "Jaipur",
     "departure": "19:00",
     "price": 600,
-    "seats": 40,
+    "seats": 39,
     "operator": "Rajasthan Travels",
     "busType": "AC Seater",
     "availableDates": [
